@@ -6,9 +6,7 @@
 
 generator client {
   provider = "prisma-client"
-  output   = "../generated/prisma"
-  generatedFileExtension = "ts"
-  importFileExtension    = "ts"
+  output   = "../src/generated/prisma"
 }
 
 datasource db {
@@ -25,7 +23,7 @@ model User {
    name                 String                     @default("Не указано")
    picture              String                     @default("/uploads/no-user-image.png")
 
-   store                Store[]
+   stores               Store[]
 
    favorites            Product[]
 
